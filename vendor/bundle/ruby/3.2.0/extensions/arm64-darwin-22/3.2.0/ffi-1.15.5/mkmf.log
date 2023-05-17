@@ -1,0 +1,384 @@
+DYLD_FALLBACK_LIBRARY_PATH=.:/opt/homebrew/Cellar/ruby/3.2.2/lib pkg-config --exists libffi
+DYLD_FALLBACK_LIBRARY_PATH=.:/opt/homebrew/Cellar/ruby/3.2.2/lib pkg-config --libs libffi |
+=> "-lffi\n"
+DYLD_FALLBACK_LIBRARY_PATH=.:/opt/homebrew/Cellar/ruby/3.2.2/lib "clang -o conftest -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/arm64-darwin22 -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/ruby/backward -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0 -I. -I/opt/homebrew/opt/libyaml/include -I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/readline/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wundef  -fno-common -pipe conftest.c  -L. -L/opt/homebrew/Cellar/ruby/3.2.2/lib -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib -L. -fstack-protector-strong -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib     -lruby.3.2  -lpthread  "
+ld: warning: building for iOS, but linking in dylib file (/opt/homebrew/Cellar/ruby/3.2.2/lib/libruby.3.2.dylib) built for macOS
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/opt/homebrew/Cellar/ruby/3.2.2/lib "clang -o conftest -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/arm64-darwin22 -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/ruby/backward -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0 -I. -I/opt/homebrew/opt/libyaml/include -I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/readline/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wundef  -fno-common -pipe conftest.c  -L. -L/opt/homebrew/Cellar/ruby/3.2.2/lib -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib -L. -fstack-protector-strong -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib     -lruby.3.2 -lffi -lpthread  "
+ld: library not found for -lffi
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+package configuration for libffi is not found
+have_header: checking for ffi.h... -------------------- no
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/opt/homebrew/Cellar/ruby/3.2.2/lib "clang -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/arm64-darwin22 -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/ruby/backward -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0 -I. -I/opt/homebrew/opt/libyaml/include -I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/readline/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wundef  -fno-common -pipe   -c conftest.c"
+conftest.c:3:10: fatal error: 'ffi.h' file not found
+#include <ffi.h>
+         ^~~~~~~
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ffi.h>
+/* end */
+
+--------------------
+
+find_header: checking for ffi.h in /usr/local/include,/usr/include/ffi,/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/ffi... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/opt/homebrew/Cellar/ruby/3.2.2/lib "clang -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/arm64-darwin22 -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/ruby/backward -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0 -I. -I/opt/homebrew/opt/libyaml/include -I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/readline/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wundef  -fno-common -pipe   -c conftest.c"
+conftest.c:3:10: fatal error: 'ffi.h' file not found
+#include <ffi.h>
+         ^~~~~~~
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ffi.h>
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/opt/homebrew/Cellar/ruby/3.2.2/lib "clang -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/arm64-darwin22 -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/ruby/backward -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0 -I. -I/opt/homebrew/opt/libyaml/include -I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/readline/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wundef  -fno-common -pipe  -I/usr/local/include -c conftest.c"
+conftest.c:3:10: fatal error: 'ffi.h' file not found
+#include <ffi.h>
+         ^~~~~~~
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ffi.h>
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/opt/homebrew/Cellar/ruby/3.2.2/lib "clang -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/arm64-darwin22 -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/ruby/backward -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0 -I. -I/opt/homebrew/opt/libyaml/include -I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/readline/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wundef  -fno-common -pipe  -I/usr/include/ffi -c conftest.c"
+conftest.c:3:10: fatal error: 'ffi.h' file not found
+#include <ffi.h>
+         ^~~~~~~
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ffi.h>
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/opt/homebrew/Cellar/ruby/3.2.2/lib "clang -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/arm64-darwin22 -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/ruby/backward -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0 -I. -I/opt/homebrew/opt/libyaml/include -I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/readline/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wundef  -fno-common -pipe  -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi -c conftest.c"
+In file included from conftest.c:3:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi/ffi.h:483:5: warning: 'FFI_GO_CLOSURES' is not defined, evaluates to 0 [-Wundef]
+#if FFI_GO_CLOSURES
+    ^
+1 warning generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ffi.h>
+/* end */
+
+--------------------
+
+have_library: checking for ffi_prep_closure_loc() in -lffi... -------------------- no
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/opt/homebrew/Cellar/ruby/3.2.2/lib "clang -o conftest -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/arm64-darwin22 -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/ruby/backward -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0 -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi -I/opt/homebrew/opt/libyaml/include -I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/readline/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wundef  -fno-common -pipe conftest.c  -L. -L/opt/homebrew/Cellar/ruby/3.2.2/lib -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib -L. -fstack-protector-strong -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib     -lruby.3.2 -lffi  -lpthread  "
+In file included from conftest.c:3:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi/ffi.h:483:5: warning: 'FFI_GO_CLOSURES' is not defined, evaluates to 0 [-Wundef]
+#if FFI_GO_CLOSURES
+    ^
+conftest.c:16:57: error: 'ffi_prep_closure_loc' is unavailable: not available on iOS
+int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_prep_closure_loc; return !p; }
+                                                        ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi/ffi.h:388:1: note: 'ffi_prep_closure_loc' has been explicitly marked unavailable here
+ffi_prep_closure_loc (ffi_closure*,
+^
+1 warning and 1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ffi.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_prep_closure_loc; return !p; }
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/opt/homebrew/Cellar/ruby/3.2.2/lib "clang -o conftest -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/arm64-darwin22 -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/ruby/backward -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0 -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi -I/opt/homebrew/opt/libyaml/include -I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/readline/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wundef  -fno-common -pipe conftest.c  -L. -L/opt/homebrew/Cellar/ruby/3.2.2/lib -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib -L. -fstack-protector-strong -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib     -lruby.3.2 -lffi  -lpthread  "
+In file included from conftest.c:3:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi/ffi.h:483:5: warning: 'FFI_GO_CLOSURES' is not defined, evaluates to 0 [-Wundef]
+#if FFI_GO_CLOSURES
+    ^
+conftest.c:16:13: error: conflicting types for 'ffi_prep_closure_loc'
+extern void ffi_prep_closure_loc();
+            ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi/ffi.h:388:1: note: previous declaration is here
+ffi_prep_closure_loc (ffi_closure*,
+^
+conftest.c:17:15: error: 'ffi_prep_closure_loc' is unavailable: not available on iOS
+int t(void) { ffi_prep_closure_loc(); return 0; }
+              ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi/ffi.h:388:1: note: 'ffi_prep_closure_loc' has been explicitly marked unavailable here
+ffi_prep_closure_loc (ffi_closure*,
+^
+conftest.c:17:36: error: too few arguments to function call, expected 5, have 0
+int t(void) { ffi_prep_closure_loc(); return 0; }
+              ~~~~~~~~~~~~~~~~~~~~ ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi/ffi.h:388:1: note: 'ffi_prep_closure_loc' declared here
+ffi_prep_closure_loc (ffi_closure*,
+^
+1 warning and 3 errors generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ffi.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: extern void ffi_prep_closure_loc();
+17: int t(void) { ffi_prep_closure_loc(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for ffi_prep_closure_loc() in -llibffi... -------------------- no
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/opt/homebrew/Cellar/ruby/3.2.2/lib "clang -o conftest -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/arm64-darwin22 -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/ruby/backward -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0 -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi -I/opt/homebrew/opt/libyaml/include -I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/readline/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wundef  -fno-common -pipe conftest.c  -L. -L/opt/homebrew/Cellar/ruby/3.2.2/lib -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib -L. -fstack-protector-strong -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib     -lruby.3.2 -llibffi  -lpthread  "
+In file included from conftest.c:3:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi/ffi.h:483:5: warning: 'FFI_GO_CLOSURES' is not defined, evaluates to 0 [-Wundef]
+#if FFI_GO_CLOSURES
+    ^
+conftest.c:16:57: error: 'ffi_prep_closure_loc' is unavailable: not available on iOS
+int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_prep_closure_loc; return !p; }
+                                                        ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi/ffi.h:388:1: note: 'ffi_prep_closure_loc' has been explicitly marked unavailable here
+ffi_prep_closure_loc (ffi_closure*,
+^
+1 warning and 1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ffi.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_prep_closure_loc; return !p; }
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/opt/homebrew/Cellar/ruby/3.2.2/lib "clang -o conftest -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/arm64-darwin22 -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/ruby/backward -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0 -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi -I/opt/homebrew/opt/libyaml/include -I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/readline/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wundef  -fno-common -pipe conftest.c  -L. -L/opt/homebrew/Cellar/ruby/3.2.2/lib -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib -L. -fstack-protector-strong -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib     -lruby.3.2 -llibffi  -lpthread  "
+In file included from conftest.c:3:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi/ffi.h:483:5: warning: 'FFI_GO_CLOSURES' is not defined, evaluates to 0 [-Wundef]
+#if FFI_GO_CLOSURES
+    ^
+conftest.c:16:13: error: conflicting types for 'ffi_prep_closure_loc'
+extern void ffi_prep_closure_loc();
+            ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi/ffi.h:388:1: note: previous declaration is here
+ffi_prep_closure_loc (ffi_closure*,
+^
+conftest.c:17:15: error: 'ffi_prep_closure_loc' is unavailable: not available on iOS
+int t(void) { ffi_prep_closure_loc(); return 0; }
+              ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi/ffi.h:388:1: note: 'ffi_prep_closure_loc' has been explicitly marked unavailable here
+ffi_prep_closure_loc (ffi_closure*,
+^
+conftest.c:17:36: error: too few arguments to function call, expected 5, have 0
+int t(void) { ffi_prep_closure_loc(); return 0; }
+              ~~~~~~~~~~~~~~~~~~~~ ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi/ffi.h:388:1: note: 'ffi_prep_closure_loc' declared here
+ffi_prep_closure_loc (ffi_closure*,
+^
+1 warning and 3 errors generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ffi.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: extern void ffi_prep_closure_loc();
+17: int t(void) { ffi_prep_closure_loc(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for ffi_prep_closure_loc() in -llibffi-8... -------------------- no
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/opt/homebrew/Cellar/ruby/3.2.2/lib "clang -o conftest -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/arm64-darwin22 -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/ruby/backward -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0 -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi -I/opt/homebrew/opt/libyaml/include -I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/readline/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wundef  -fno-common -pipe conftest.c  -L. -L/opt/homebrew/Cellar/ruby/3.2.2/lib -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib -L. -fstack-protector-strong -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib     -lruby.3.2 -llibffi-8  -lpthread  "
+In file included from conftest.c:3:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi/ffi.h:483:5: warning: 'FFI_GO_CLOSURES' is not defined, evaluates to 0 [-Wundef]
+#if FFI_GO_CLOSURES
+    ^
+conftest.c:16:57: error: 'ffi_prep_closure_loc' is unavailable: not available on iOS
+int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_prep_closure_loc; return !p; }
+                                                        ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi/ffi.h:388:1: note: 'ffi_prep_closure_loc' has been explicitly marked unavailable here
+ffi_prep_closure_loc (ffi_closure*,
+^
+1 warning and 1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ffi.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: int t(void) { void ((*volatile p)()); p = (void ((*)()))ffi_prep_closure_loc; return !p; }
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/opt/homebrew/Cellar/ruby/3.2.2/lib "clang -o conftest -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/arm64-darwin22 -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/ruby/backward -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0 -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi -I/opt/homebrew/opt/libyaml/include -I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/readline/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wundef  -fno-common -pipe conftest.c  -L. -L/opt/homebrew/Cellar/ruby/3.2.2/lib -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib -L. -fstack-protector-strong -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib     -lruby.3.2 -llibffi-8  -lpthread  "
+In file included from conftest.c:3:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi/ffi.h:483:5: warning: 'FFI_GO_CLOSURES' is not defined, evaluates to 0 [-Wundef]
+#if FFI_GO_CLOSURES
+    ^
+conftest.c:16:13: error: conflicting types for 'ffi_prep_closure_loc'
+extern void ffi_prep_closure_loc();
+            ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi/ffi.h:388:1: note: previous declaration is here
+ffi_prep_closure_loc (ffi_closure*,
+^
+conftest.c:17:15: error: 'ffi_prep_closure_loc' is unavailable: not available on iOS
+int t(void) { ffi_prep_closure_loc(); return 0; }
+              ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi/ffi.h:388:1: note: 'ffi_prep_closure_loc' has been explicitly marked unavailable here
+ffi_prep_closure_loc (ffi_closure*,
+^
+conftest.c:17:36: error: too few arguments to function call, expected 5, have 0
+int t(void) { ffi_prep_closure_loc(); return 0; }
+              ~~~~~~~~~~~~~~~~~~~~ ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi/ffi.h:388:1: note: 'ffi_prep_closure_loc' declared here
+ffi_prep_closure_loc (ffi_closure*,
+^
+1 warning and 3 errors generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ffi.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: extern void ffi_prep_closure_loc();
+17: int t(void) { ffi_prep_closure_loc(); return 0; }
+/* end */
+
+--------------------
+
+block in append_ldflags: checking for whether -Wl,--exclude-libs,ALL is accepted as LDFLAGS... -------------------- no
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/opt/homebrew/Cellar/ruby/3.2.2/lib "clang -o conftest -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/arm64-darwin22 -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/ruby/backward -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0 -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi -I/opt/homebrew/opt/libyaml/include -I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/readline/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wundef  -fno-common -pipe conftest.c  -L. -L/opt/homebrew/Cellar/ruby/3.2.2/lib -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib -L. -fstack-protector-strong -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib     -lruby.3.2 -Wl,--exclude-libs,ALL -lpthread  "
+ld: unknown option: --exclude-libs
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+--------------------
+
+block in append_ldflags: checking for whether -pthread is accepted as LDFLAGS... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/opt/homebrew/Cellar/ruby/3.2.2/lib "clang -o conftest -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/arm64-darwin22 -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0/ruby/backward -I/opt/homebrew/Cellar/ruby/3.2.2/include/ruby-3.2.0 -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ffi -I/opt/homebrew/opt/libyaml/include -I/opt/homebrew/opt/openssl@1.1/include -I/opt/homebrew/opt/readline/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wextra-tokens -Wdeprecated-declarations -Wdivision-by-zero -Wdiv-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wundef  -fno-common -pipe conftest.c  -L. -L/opt/homebrew/Cellar/ruby/3.2.2/lib -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib -L. -fstack-protector-strong -L/opt/homebrew/opt/libyaml/lib -L/opt/homebrew/opt/openssl@1.1/lib -L/opt/homebrew/opt/readline/lib     -lruby.3.2 -pthread -lpthread  "
+ld: warning: building for iOS, but linking in dylib file (/opt/homebrew/Cellar/ruby/3.2.2/lib/libruby.3.2.dylib) built for macOS
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+--------------------
+
+extconf.h is:
+/* begin */
+1: #ifndef EXTCONF_H
+2: #define EXTCONF_H
+3: #define HAVE_FFI_PREP_CIF_VAR 1
+4: #define USE_INTERNAL_LIBFFI 1
+5: #define USE_FFI_ALLOC 1
+6: #endif
+/* end */
+
