@@ -1,96 +1,41 @@
-import React, {useState} from 'react';
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import React from 'react';
+import { ScrollView, Text, StyleSheet } from 'react-native';
+import {
+  ShoppingCartList,
+  DropdownSelection,
+  ProductList,
+  BooksList,
+  PersonList,
+  UserList,
+} from './app/components';
 
-// interface Item {
-//   id: number;
-//   name: string;
-// }
-
-// interface DropDownMultiSelectProps<T extends Item> {
-//   items: T[];
-//   selectedItems: T[];
-//   onSelect: (selectedItems: T[]) => void;
-// }
-
-// const DropDownMultiSelect = <T extends Item>({
-//   items,
-//   selectedItems,
-//   onSelect,
-// }: DropDownMultiSelectProps<T>) => {
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   const toggleSelect = (item: T) => {
-//     const isSelected = selectedItems?.find(
-//       selectedItem => selectedItem.id === item.id,
-//     );
-//     console.log('isSelected>>>>',isSelected);
-    
-//     if (isSelected) {
-//       console.log('if>>>>>');
-
-//       const filteredItems = selectedItems.filter(
-//         selectedItem => selectedItem.id !== item.id,
-//       );
-//       onSelect(filteredItems);
-//     } else {
-//       console.log('else>>>>>');
-      
-//       const updatedItems = [...selectedItems, item];
-//       onSelect(updatedItems);
-//     }
-//   };
-
-//   return (
-//     <View>
-//       <TouchableOpacity
-//         onPress={() => setIsOpen(!isOpen)}
-//         style={{backgroundColor: 'pink', padding: 10}}>
-//         <Text style={{fontSize: 20}}>Open Dropdown</Text>
-//       </TouchableOpacity>
-//       {isOpen && (
-//         <View>
-//           {items?.map(item => (
-//             <TouchableOpacity
-//               style={{backgroundColor: 'green'}}
-//               key={item?.id}
-//               onPress={() => toggleSelect(item)}>
-//               <Text style={{fontSize: 20}}>{item?.name}</Text>
-//             </TouchableOpacity>
-//           ))}
-//         </View>
-//       )}
-//     </View>
-//   );
-// };
-
-// const items = [
-//   {id: 1, name: 'Option 1'},
-//   {id: 2, name: 'Option 2'},
-//   {id: 3, name: 'Option 3'},
-//   // Add more options as needed
-// ];
-
-const App = () => {
-  // const handleSelection = selectedItems => {
-  //   console.log('Selected Items:', selectedItems);
-  // };
-
+const App: React.FC = () => {
   return (
-    <View style={styles.container}>
-      {/* <DropDownMultiSelect
-        items={items}
-        selectedItems={[]}
-        onSelect={handleSelection}
-      /> */}
-    </View>
+    <ScrollView contentContainerStyle={styles.scrollView}>
+      <Text style={styles.title}>Generic Class Example</Text>
+      <ShoppingCartList />
+      <Text style={styles.title}>Generic Interface Example</Text>
+      <BooksList />
+      <Text style={styles.title}>Generic Constraint Example</Text>
+      <PersonList />
+      <Text style={styles.title}>Generic Consitional Return Type Example</Text>
+      <ProductList />
+      <Text style={styles.title}>Generic Component Example</Text>
+      <DropdownSelection />
+      <Text style={styles.title}>Generic Function Example</Text>
+      <UserList />
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+  scrollView: {
+    flexGrow: 1,
+    paddingVertical: '20%',
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: '500',
   },
 });
 
